@@ -9,7 +9,7 @@ tiles.addTo(mymap);
 
 async function fetchLocation(ip) {
         var value;
-        await fetch('https://geo.ipify.org/api/v1?apiKey=' + process.env.API_KEY + '&ipAddress=' + ip, {
+        await fetch('https://geo.ipify.org/api/v1?apiKey=at_KvK9f5u7StYcnwQVhloWnCdQkOWDK&ipAddress=' + ip, {
           method: 'GET'
         })
           .then(response => { value = response.json()})
