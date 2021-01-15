@@ -12,7 +12,6 @@ async function fetchLocation(ip) {
         await fetch('https://geo.ipify.org/api/v1?apiKey=at_KvK9f5u7StYcnwQVhloWnCdQkOWDK&ipAddress=' + ip, {
           method: 'GET',
           headers: {
-            'Access-Control-Allow-Origin':'*',
             'Accept': '*/*'
           }
         })
