@@ -118,7 +118,7 @@ button {
     color:#2d2d2d;
 }
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:575px){
     .heroBox{
         height:45vh;
     }

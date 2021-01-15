@@ -1,4 +1,5 @@
 var mymap = L.map("mapid").setView([0, 0], 2);
+const marker = L.marker([0, 0]).addTo(mymap);
 const attribution =
   'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap<\/a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA<\/a>';
 const tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
@@ -29,6 +30,7 @@ async function fetchLocation(ip) {
         const data = await fetchLocation(ip);
         console.log(data)
         mymap.setView([data.location.lat, data.location.lng], 10);
+        marker.setLatLng([data.location.lat, data.location.lng]);
         
         ipadd.innerHTML = data.ip;
         location.innerHTML = data.location.city + ", " + data.location.region + " " + data.location.postalCode;
