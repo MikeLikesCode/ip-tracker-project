@@ -11,16 +11,10 @@ async function fetchLocation(ip) {
         var value;
         await fetch('https://geo.ipify.org/api/v1?apiKey=at_KvK9f5u7StYcnwQVhloWnCdQkOWDK&ipAddress=' + ip, {
           method: 'GET',
-          headers: {
-            'Accept': '*/*',
-            'Accept-Encoding' : 'gzip, deflate, br',
-            'Sec-Fetch-Dest' : 'empty',
-            'Sec-Fetch-Mode' : 'cors',
-            'Sec-Fetch-Site' : 'cross-site'
-          }
+          mode: 'cors', // no-cors, *cors, same-origin
         })
           .then(response => { value = response.json()})
-          .catch(err => {
+          .catch((err) => {
             console.log(err)
           });
       return value
