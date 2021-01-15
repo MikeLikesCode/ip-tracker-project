@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"><!-- displays site properly based on user's device -->
+	<link href="./images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+	<link href="./styles/main.css" rel="stylesheet">
+	<link href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" rel="stylesheet">
+	<title>Frontend Mentor | IP Address Tracker</title>
+</head>
+<body>
+	<div class="heroBox">
+		<div class="heroContent">
+			<h1>IP Address Tracker</h1>
+			<form>
+				<input id="address" name="Ip Address" placeholder="Search for any IP address or domain" type="text"> <button id="submit"><img src="./images/icon-arrow.svg"></button>
+			</form>
+		</div>
+	</div>
+	<div class="infoContainer">
+		<div class="infoBox">
+      <div>
+        <p>IP Address</p>
+        <h1 id="ip">IP</h1>
+      </div>
+      <div>
+        <p>Location</p>
+        <h1 id="location">Location</h1>
+      </div>
+      <div>
+        <p>Timezone</p>
+        <h1 id="time">UTC</h1>
+      </div>
+      <div>
+        
+        <p>ISP</p>
+      <h1 id="isp">ISP</h1>
+      </div>
+		</div>
+	</div>
+  <div id="mapid"></div>
+  <!-- <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Michael Guerrero</a>.
+  </div> -->
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js">
+	</script> 
+	<script src="./javascript/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+html,body{
+margin:0;
+padding:0;
+border:0;
+font-family: 'Rubik', sans-serif;
+}
+
+input[type="text"], input[type="password"], textarea, select, button { 
+    outline: none;
+}
+
+form{
+    display:flex;
+}
+
+input{
+    height: auto;
+    padding:0px 1vw;
+    width:26vw;
+    height: 50px;
+    border:0px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+@media only screen and (max-width:600px){
+    input{
+        width:64vw;
+    }
+}
+
+button {
+    background-color: #000000;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      margin-bottom: 0;
+      padding: 14px 18px;
+      text-align: center;
+      border-radius: 0px 10px 10px 0px;
+      transition: all 300ms ease 0s;
+      vertical-align: middle;
+}
+
+.heroBox{
+    display:flex;
+    justify-content: center;
+    width:100%;
+    background: url('../images/pattern-bg.png');
+    background-size: cover;
+    height:30vh;
+}
+
+.heroContent{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0px;
+}
+
+.heroContent h1{
+    color:white;
+    font-weight: 500;
+}
+
+.infoContainer{
+    position: absolute;
+    display:flex;
+    justify-content: center;
+    top: 20vh;
+    width:100%;
+    z-index: 1;
+}
+
+.infoBox{
+    display:flex;
+    justify-content: space-around;
+    background-color: rgb(255, 255, 255);
+    padding: 15px 35px;
+    border-radius:15px;
+    width:80%;
+    -moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width:600px){
+    .infoBox{
+        display:initial;
+        text-align:center;
+        height:35vh;
+    }
+
+
+}
+
+.infoBox div{
+    width:100%;
+    margin: 3vh 0px;
+    padding: 0px 25px;
+    border-right: 2px solid hsl(0, 0%, 90%);;
+}
+
+
+.infoBox div:last-child{
+    border-right: 0px;
+    padding-right:0px;
+}
+
+.infoBox div p{
+    text-transform: uppercase;
+    font-weight:700;
+    margin-top:8px;
+    margin-bottom:8px;
+    color:hsl(0, 0%, 50%);
+}
+
+.infoBox div h1{
+    margin:0;
+    font-weight: 500;
+    color:#2d2d2d;
+}
+
+#mapid{
+    height:70vh;
+    width:100%;
+    position: relative;;
+    z-index: 0;
+}
+
+.attribution{ 
+font-size: 11px; 
+text-align: center; 
+}
+
+.attribution a{ 
+color: hsl(228, 45%, 44%);
+}
