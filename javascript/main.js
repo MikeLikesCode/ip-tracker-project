@@ -9,10 +9,14 @@ tiles.addTo(mymap);
 
 async function fetchLocation(ip) {
         var value;
-        await fetch('https://cors-anywhere.herokuapp.com/https://geo.ipify.org/api/v1?apiKey=at_KvK9f5u7StYcnwQVhloWnCdQkOWDK&ipAddress=' + ip, {
+        await fetch('https://geo.ipify.org/api/v1?apiKey=at_KvK9f5u7StYcnwQVhloWnCdQkOWDK&ipAddress=' + ip, {
           method: 'GET',
           headers: {
-            'Accept': '*/*'
+            'Accept': '*/*',
+            'Accept-Encoding' : 'gzip, deflate, br',
+            'Sec-Fetch-Dest' : 'empty',
+            'Sec-Fetch-Mode' : 'cors',
+            'Sec-Fetch-Site' : 'cross-site'
           }
         })
           .then(response => { value = response.json()})
